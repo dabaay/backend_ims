@@ -14,4 +14,7 @@ services:
         value: stderr
       - key: DB_CONNECTION
         value: pgsql
+      - key: DB_URL
+        fromSecret: ims-db-secrets
+        secretKey: DATABASE_URL
       - fromGroup: ims-db-secrets
