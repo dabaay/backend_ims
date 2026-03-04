@@ -13,4 +13,5 @@ services:
       - key: LOG_CHANNEL
         value: stderr
       - key: DB_CONNECTION
-        value: mysql
+        value: pgsql
+      - fromGroup: ims-db-secrets
