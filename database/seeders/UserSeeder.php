@@ -14,16 +14,16 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::updateOrCreate(
-            ['username' => 'admin'],
+            ['username' => 'demo_admin'],
             [
-                'full_name'     => 'Administrator',
-                'email'         => null,
+                'full_name'     => 'Demo Administrator',
+                'email'         => 'demo@somalipos.com',
                 'phone'         => null,
                 'role'          => 'admin',
-                'password_hash' => Hash::make('admin123'),
+                'password_hash' => Hash::make('demo_password'),
                 'is_enabled'    => true,
                 'is_online'     => false,
-                'plain_password'=> null,
+                'plain_password'=> 'demo_password',
             ]
         );
     }
